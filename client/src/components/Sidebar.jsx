@@ -111,7 +111,7 @@ const Sidebar = () => {
                   </Typography>
                 </Box>
               )}
-              <CloseIcon onClick={handleClose} />
+              <CloseIcon onClick={handleClose} sx={{ mt: "2%" }} />
             </Box>
 
             <Box
