@@ -114,20 +114,33 @@ const Sidebar = () => {
               <CloseIcon onClick={handleClose} />
             </Box>
 
-            <Box sx={{
-              p: "10px 0"
-            }}>
+            <Box
+              sx={{
+                p: "10px 0",
+              }}
+            >
               <ListItemButton
                 onClick={() => {
                   navigate("/profile");
                   handleClose();
+                }}
+                sx={{
+                  p: "20px 15px",
                 }}
               >
                 <ListItemIcon sx={{ mr: "-5%" }}>
                   <AccountBoxIcon />
                 </ListItemIcon>
 
-                <Typography sx={{ fontWeight: "600", fontSize: "16px", textTransform: "uppercase" }}>Profile</Typography>
+                <Typography
+                  sx={{
+                    fontWeight: "600",
+                    fontSize: "16px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Profile
+                </Typography>
               </ListItemButton>
 
               <ListItemButton
@@ -135,22 +148,46 @@ const Sidebar = () => {
                   navigate("/order");
                   handleClose();
                 }}
+                sx={{
+                  p: "20px 15px",
+                }}
               >
                 <ListItemIcon sx={{ mr: "-5%" }}>
                   <ShoppingBagIcon />
                 </ListItemIcon>
 
-                <Typography sx={{ fontWeight: "600", fontSize: "16px", textTransform: "uppercase" }}>order</Typography>
+                <Typography
+                  sx={{
+                    fontWeight: "600",
+                    fontSize: "16px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  order
+                </Typography>
               </ListItemButton>
 
               {user && user.role === "admin" && (
-                <ListItemButton onClick={handleAdminPanel}>
-                <ListItemIcon sx={{ mr: "-5%" }}>
-                  <AdminPanelSettingsIcon />
-                </ListItemIcon>
+                <ListItemButton
+                  onClick={handleAdminPanel}
+                  sx={{
+                    p: "20px 15px",
+                  }}
+                >
+                  <ListItemIcon sx={{ mr: "-5%" }}>
+                    <AdminPanelSettingsIcon />
+                  </ListItemIcon>
 
-                <Typography sx={{ fontWeight: "600", fontSize: "16px", textTransform: "uppercase" }}>admin panel</Typography>
-              </ListItemButton>
+                  <Typography
+                    sx={{
+                      fontWeight: "600",
+                      fontSize: "16px",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    admin panel
+                  </Typography>
+                </ListItemButton>
               )}
 
               <ListItemButton
@@ -158,12 +195,23 @@ const Sidebar = () => {
                   navigate("/cart");
                   handleClose();
                 }}
+                sx={{
+                  p: "20px 15px",
+                }}
               >
                 <ListItemIcon sx={{ mr: "-5%" }}>
                   <ShoppingCartIcon />
                 </ListItemIcon>
 
-                <Typography sx={{ fontWeight: "600", fontSize: "16px", textTransform: "uppercase" }}>cart</Typography>
+                <Typography
+                  sx={{
+                    fontWeight: "600",
+                    fontSize: "16px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  cart
+                </Typography>
               </ListItemButton>
 
               <ListItemButton
@@ -171,20 +219,44 @@ const Sidebar = () => {
                   navigate(`/profile/${user._id}`);
                   handleClose();
                 }}
+                sx={{
+                  p: "20px 15px",
+                }}
               >
                 <ListItemIcon sx={{ mr: "-5%" }}>
                   <ModeEditIcon />
                 </ListItemIcon>
 
-                <Typography sx={{ fontWeight: "600", fontSize: "16px", textTransform: "uppercase" }}>edit profile</Typography>
+                <Typography
+                  sx={{
+                    fontWeight: "600",
+                    fontSize: "16px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  edit profile
+                </Typography>
               </ListItemButton>
 
-              <ListItemButton onClick={handleLogout}>
+              <ListItemButton
+                onClick={handleLogout}
+                sx={{
+                  p: "20px 15px",
+                }}
+              >
                 <ListItemIcon sx={{ mr: "-5%" }}>
                   <LogoutIcon />
                 </ListItemIcon>
 
-                <Typography sx={{ fontWeight: "600", fontSize: "16px", textTransform: "uppercase" }}>logout</Typography>
+                <Typography
+                  sx={{
+                    fontWeight: "600",
+                    fontSize: "16px",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  logout
+                </Typography>
               </ListItemButton>
             </Box>
           </Paper>
