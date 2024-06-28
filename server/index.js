@@ -12,7 +12,8 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors(
-  origin: 'https://shopkart019.vercel.app'
+  origin: 'https://shopkart019.vercel.app',
+  optionsSuccessStatus: 200
 ));
 app.use(bodyParser.json({ limit: "100mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
