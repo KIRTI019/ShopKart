@@ -5,8 +5,6 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import productRoutes from "./routes/product.js";
 import userRoutes from "./routes/user.js";
-import { verifyToken } from "./middleware/token.js";
-import { paymentIntent } from "./controllers/paymentIntent.js";
 
 dotenv.config();
 const app = express();
@@ -16,7 +14,6 @@ app.use(bodyParser.json({ limit: "100mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
 app.use("/product", productRoutes);
 app.use("/user", userRoutes);
-app.post("/payment", verifyToken, paymentIntent);
 
 const PORT = process.env.PORT || 7001;
 mongoose
