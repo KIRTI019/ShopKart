@@ -2,7 +2,6 @@ import {
   Box,
   ListItemButton,
   ListItemIcon,
-  ListItemText,
   Paper,
   Typography,
   useMediaQuery,
@@ -66,7 +65,7 @@ const Sidebar = () => {
   return (
     <Box
       sx={{
-        m: "1% -40% 0 0",
+        m: "5px 2% 0 0",
       }}
     >
       <MenuIcon onClick={handleClick} />
@@ -90,7 +89,7 @@ const Sidebar = () => {
                 justifyContent: "space-between",
                 color: "white",
                 backgroundColor: "black",
-                p: "15px",
+                p: "20px",
               }}
             >
               {user ? (
@@ -115,18 +114,20 @@ const Sidebar = () => {
               <CloseIcon onClick={handleClose} />
             </Box>
 
-            <Box>
+            <Box sx={{
+              p: "10px 0"
+            }}>
               <ListItemButton
                 onClick={() => {
                   navigate("/profile");
                   handleClose();
                 }}
               >
-                <ListItemIcon>
+                <ListItemIcon sx={{ mr: "-5%" }}>
                   <AccountBoxIcon />
                 </ListItemIcon>
 
-                <ListItemText>Profile</ListItemText>
+                <Typography sx={{ fontWeight: "600", fontSize: "16px", textTransform: "uppercase" }}>Profile</Typography>
               </ListItemButton>
 
               <ListItemButton
@@ -135,20 +136,20 @@ const Sidebar = () => {
                   handleClose();
                 }}
               >
-                <ListItemIcon>
+                <ListItemIcon sx={{ mr: "-5%" }}>
                   <ShoppingBagIcon />
                 </ListItemIcon>
 
-                <ListItemText>Order</ListItemText>
+                <Typography sx={{ fontWeight: "600", fontSize: "16px", textTransform: "uppercase" }}>order</Typography>
               </ListItemButton>
 
-              {user.role === "admin" && (
+              {user && user.role === "admin" && (
                 <ListItemButton onClick={handleAdminPanel}>
-                <ListItemIcon>
+                <ListItemIcon sx={{ mr: "-5%" }}>
                   <AdminPanelSettingsIcon />
                 </ListItemIcon>
 
-                <ListItemText>Admin Panel</ListItemText>
+                <Typography sx={{ fontWeight: "600", fontSize: "16px", textTransform: "uppercase" }}>admin panel</Typography>
               </ListItemButton>
               )}
 
@@ -158,11 +159,11 @@ const Sidebar = () => {
                   handleClose();
                 }}
               >
-                <ListItemIcon>
+                <ListItemIcon sx={{ mr: "-5%" }}>
                   <ShoppingCartIcon />
                 </ListItemIcon>
 
-                <ListItemText>Cart</ListItemText>
+                <Typography sx={{ fontWeight: "600", fontSize: "16px", textTransform: "uppercase" }}>cart</Typography>
               </ListItemButton>
 
               <ListItemButton
@@ -171,19 +172,19 @@ const Sidebar = () => {
                   handleClose();
                 }}
               >
-                <ListItemIcon>
+                <ListItemIcon sx={{ mr: "-5%" }}>
                   <ModeEditIcon />
                 </ListItemIcon>
 
-                <ListItemText>Edit Profile</ListItemText>
+                <Typography sx={{ fontWeight: "600", fontSize: "16px", textTransform: "uppercase" }}>edit profile</Typography>
               </ListItemButton>
 
               <ListItemButton onClick={handleLogout}>
-                <ListItemIcon>
+                <ListItemIcon sx={{ mr: "-5%" }}>
                   <LogoutIcon />
                 </ListItemIcon>
 
-                <ListItemText>Logout</ListItemText>
+                <Typography sx={{ fontWeight: "600", fontSize: "16px", textTransform: "uppercase" }}>logout</Typography>
               </ListItemButton>
             </Box>
           </Paper>
