@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { setLogout } from "../state/authSlice";
 import SearchIcon from "@mui/icons-material/Search";
 import Sidebar from "./Sidebar";
@@ -72,12 +72,21 @@ const Navbar = () => {
       >
         {!isNonMobileScreen && <Sidebar />}
         <Logo />
-        {isNonMobileScreen && (
-          <SearchBar
+        <Box sx={{ flexGrow: isNonMobileScreen ? "" : 1 }} />
+        {isNonMobileScreen ? (
+          <Box sx={{
+            pr: "200px"
+          }}>
+            <SearchBar
             searchQuery={searchQuery}
             onSearchChange={setSearchQuery}
             onSearch={handleSearch}
           />
+          </Box>
+        ) : (
+          <Box sx={{ cursor: "pointer", fontSize: "2rem", m: user ? "-1% -5% 0 0" : "-1% 5% 0 0" }}>
+            <SearchIcon />
+          </Box>
         )}
         {user ? (
           <Box
@@ -89,7 +98,6 @@ const Navbar = () => {
               m: isNonMobileScreen ? "0.5% 1.5% 0 0" : "2% -10% 0 0",
             }}
           >
-            {!isNonMobileScreen && <SearchIcon />}
             <Box sx={{ display: isNonMobileScreen ? "block" : "none" }}>
               <PersonIcon onClick={handleClick} sx={{ cursor: "pointer" }} />
               {open && (
