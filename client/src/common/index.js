@@ -1,1 +1,1 @@
-export const backendDomain = "https://shopkart-backend-nine.vercel.app";
+export const backendDomain = "http://localhost:9001";
