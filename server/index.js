@@ -11,7 +11,9 @@ import { paymentIntent } from "./controllers/paymentIntent.js";
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  origin: 'https://shopkart019.vercel.app'
+));
 app.use(bodyParser.json({ limit: "100mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
 app.use("/product", productRoutes);
