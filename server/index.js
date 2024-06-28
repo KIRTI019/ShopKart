@@ -5,7 +5,6 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import productRoutes from "./routes/product.js";
 import userRoutes from "./routes/user.js";
-import { verifyToken } from "./middleware/token.js";
 
 dotenv.config();
 const app = express();
