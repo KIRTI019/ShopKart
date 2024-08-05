@@ -70,7 +70,7 @@ const ProductDetail = () => {
         sx={{
           display: isNonMobileScreen ? "flex" : "block",
           p: isNonMobileScreen ? "20px" : "20px",
-          mt: "15%"
+          mt: isNonMobileScreen ? "5%" : "15%"
         }}
       >
         <Box sx={{ display: isNonMobileScreen ? "" : "flex", justifyContent: "center", mb: isNonMobileScreen ? "" : "5%" }}>
