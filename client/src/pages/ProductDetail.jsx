@@ -145,7 +145,7 @@ const ProductDetail = () => {
           </Box>
           <Box sx={{
             width: isNonMobileScreen ? "80%" : "50%",
-            ml: "-2%"
+            ml: isNonMobileScreen ? "3%" : "-2%"
           }}>
           <AddToCartButton product={product} />
           </Box>
