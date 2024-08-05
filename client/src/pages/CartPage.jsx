@@ -49,9 +49,6 @@ const CartPage = () => {
     fetchCart();
   }, [user._id, cartItems]);
 
-  const handlePaymentClick = () => {
-    navigate('/payment');
-  };
 
   return (
     <Box
@@ -191,7 +188,6 @@ const CartPage = () => {
               p: "2% 0",
               cursor: "pointer",
             }}
-{/*             onClick={handlePaymentClick} */}
           >
             <Typography sx={{ fontWeight: "600", fontSize: "18px" }}>
               Payment
