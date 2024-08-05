@@ -34,7 +34,7 @@ import {
   
     const styles = {
       container: {
-        mt: isNonMobileScreen ? "5%" : "15%",
+        m: isNonMobileScreen ? "5% 0 2% 0" : "20% 0 10% 0",
       },
       title: {
         fontSize: isNonMobileScreen ? "25px" : "20px",
