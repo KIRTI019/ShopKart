@@ -6,8 +6,7 @@ import CartPage from "../pages/CartPage";
 import AdminPage from "../pages/AdminPage";
 import ProfileDetail from "../components/ProfileDetail";
 import ProductSearch from "../pages/ProductSearch";
-// import OrderPage from "../pages/OrderPage";
-import PaymentDetail from "../components/PaymentDetail";
+// import OrderPage from "../pages/OrderPage"
 
  export const importantRoutes = [
   {
