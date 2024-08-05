@@ -70,7 +70,7 @@ const ProductDetail = () => {
         sx={{
           display: isNonMobileScreen ? "flex" : "block",
           p: isNonMobileScreen ? "20px" : "20px",
-          mt: "5%"
+          mt: "15%"
         }}
       >
         <Box sx={{ display: isNonMobileScreen ? "" : "flex", justifyContent: "center", mb: isNonMobileScreen ? "" : "5%" }}>
@@ -104,6 +104,7 @@ const ProductDetail = () => {
         >
           <img src={activeImage} alt="product" width="100%"  height="100%" />
         </Box>
+
         <Box
           sx={{
             ml: "3%",
@@ -116,7 +117,7 @@ const ProductDetail = () => {
               borderRadius: "10px",
               width: "fit-content",
               p: "1% 5%",
-              mt: isNonMobileScreen ? "" : "20%"
+              mt: isNonMobileScreen ? "" : "10%",
             }}
           >
             <Typography>{product.brand}</Typography>
@@ -143,7 +144,7 @@ const ProductDetail = () => {
             </Typography>
           </Box>
           <Box sx={{
-            width: isNonMobileScreen ? "80%" : "40%",
+            width: isNonMobileScreen ? "80%" : "50%",
             ml: "-2%"
           }}>
           <AddToCartButton product={product} />
