@@ -94,7 +94,7 @@ const UserSetting = () => {
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="center">S. No.</TableCell>
+            <TableCell align="center" sx={{ display: isNonMobileScreen ? "block" : "none" }}>S. No.</TableCell>
             <TableCell align="center">Name</TableCell>
             <TableCell align="center">Email</TableCell>
             <TableCell align="center">Role</TableCell>
@@ -105,7 +105,7 @@ const UserSetting = () => {
         <TableBody>
           {user.map((item, index) => (
             <TableRow key={index}>
-              <TableCell align="center">{index + 1}</TableCell>
+              <TableCell align="center" sx={{ display: isNonMobileScreen ? "block" : "none" }}>{index + 1}</TableCell>
               <TableCell align="center">{item.displayName}</TableCell>
               <TableCell align="center">{item.email}</TableCell>
               <TableCell align="center">{item.role}</TableCell>
